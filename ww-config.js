@@ -5,6 +5,12 @@ export default {
     categories: ['account', 'navigation'],
   },
   properties: {
+    isAuthenticated: {
+      label: { en: 'Is Authenticated' },
+      type: 'OnOff',
+      bindable: true,
+      defaultValue: false,
+    },
     avatarUrl: {
       label: { en: 'Avatar URL' },
       type: 'Text',
@@ -65,6 +71,11 @@ export default {
     {
       name: 'user:menu-open',
       label: { en: 'On Menu Open' },
+      event: {},
+    },
+    {
+      name: 'user:signInClicked',
+      label: { en: 'On Sign In Clicked' },
       event: {},
     },
   ],

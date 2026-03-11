@@ -1,6 +1,6 @@
 {
   "name": "member-user-icon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Avatar dropdown menu with account navigation for Spread.co members",
   "scripts": {
     "build": "weweb build",

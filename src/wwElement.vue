@@ -1,5 +1,8 @@
 <template>
   <div class="mui" ref="root">
+    <!-- Authenticated: avatar button + dropdown -->
+    <template v-if="content.isAuthenticated">
+
     <!-- Avatar / Initials trigger button -->
     <button
       class="mui__btn"
@@ -71,6 +74,17 @@
         </button>
       </div>
     </transition>
+
+    </template><!-- end v-if isAuthenticated -->
+
+    <!-- Unauthenticated: Sign in pill -->
+    <template v-else>
+      <button
+        class="mui__signin"
+        @click="$emit('trigger-event', { name: 'user:signInClicked', event: {} })"
+      >Sign in</button>
+    </template>
+
   </div>
 </template>
 
@@ -436,6 +450,34 @@ export default {
 :global(html.dark) .mui__item--signout:hover {
   background: rgba(209, 67, 67, 0.12);
   color: #f87171;
+}
+
+/* ── Sign in pill (unauthenticated state) ── */
+.mui__signin {
+  background: #ce6632;
+  color: #fff;
+  font-family: var(--spread-font, 'Work Sans', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 9999px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.mui__signin:hover {
+  background: #b85a2b;
+}
+
+:global(html.dark) .mui__signin {
+  background: #ce6632;
+}
+
+:global(html.dark) .mui__signin:hover {
+  background: #b85a2b;
 }
 
 /* ── Responsive ── */
