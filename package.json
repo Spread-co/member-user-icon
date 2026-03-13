@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "Avatar dropdown menu with account navigation for Spread.co members",
   "scripts": {
-    "build": "weweb build",
+    "build": "weweb build -- name=spread-member-user-icon type=element",
     "serve": "weweb serve"
   },
   "devDependencies": {

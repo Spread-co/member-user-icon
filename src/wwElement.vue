@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!content.portalTarget || content.portalTarget === 'member'" class="mui" ref="root">
+  <div v-if="!content.portalTarget || content.portalTarget === 'member' || content.portalTarget === 'admin'" class="mui" ref="root">
     <!-- Authenticated: avatar button + dropdown -->
     <template v-if="content.isAuthenticated">
 
