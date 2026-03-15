@@ -438,7 +438,7 @@ export default {
   --spread-surface: #1a0f14;
   --spread-bg: #1f1218;
   --spread-border: rgba(230, 216, 202, 0.12);
-  --spread-text-primary: #f5f0eb;
+  --spread-text-primary: #e6d8ca;
   --spread-text-secondary: #e6d8ca;
   --spread-text-muted: rgba(230, 216, 202, 0.45);
 }
